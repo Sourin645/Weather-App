@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #06b6d4
+        );
+
+    color: #ffffff;
+
+    padding: 40px 20px;
+}
+
+.weather-app {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+/* Header */
+
+.header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 42px;
+
+    margin-bottom: 8px;
+}
+
+.header p {
+    font-size: 16px;
+
+    opacity: 0.9;
+}
+
+/* Search */
+
+.search-section {
+    display: flex;
+
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+
+    gap: 10px;
+}
+
+.search-section input {
+    flex: 1;
+
+    padding: 15px 18px;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+}
+
+.search-section button {
+    padding: 15px 25px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #111827;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.search-section button:hover {
+    background: #1f2937;
+
+    transform: translateY(-2px);
+}
+
+/* Location */
+
+.weather-container {
+    background: rgba(255, 255, 255, 0.15);
+
+    backdrop-filter: blur(12px);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.location-info {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.location-info h2 {
+    font-size: 32px;
+
+    margin-bottom: 5px;
+}
+
+.location-info p {
+    opacity: 0.9;
+
+    margin-bottom: 5px;
+}
+
+/* Main Weather */
+
+.main-weather {
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 30px;
+}
+
+.temperature-section {
+    text-align: center;
+}
+
+.temperature-section img {
+    width: 100px;
+
+    height: 100px;
+}
+
+.temperature-section div {
+    font-size: 64px;
+
+    font-weight: bold;
+}
+
+.degree {
+    font-size: 30px;
+
+    vertical-align: top;
+}
+
+.temperature-section p {
+    font-size: 20px;
+
+    margin-top: 5px;
+}
+
+/* Weather Cards */
+
+.weather-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.18);
+
+    border-radius: 15px;
+
+    padding: 22px;
+
+    text-align: center;
+
+    transition: 0.3s;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.weather-card:hover {
+    transform: translateY(-5px);
+
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.card-icon {
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+.weather-card h3 {
+    font-size: 15px;
+
+    margin-bottom: 10px;
+
+    opacity: 0.9;
+}
+
+.weather-card p {
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+.weather-card small {
+    display: block;
+
+    margin-top: 6px;
+
+    opacity: 0.9;
+}
+
+/* Loading */
+
+.loading {
+    text-align: center;
+
+    font-size: 18px;
+
+    margin: 20px 0;
+}
+
+/* Error */
+
+.error {
+    max-width: 650px;
+
+    margin: 20px auto;
+
+    padding: 15px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    background: rgba(220, 38, 38, 0.9);
+
+    color: white;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+
+    margin-top: 25px;
+
+    font-size: 14px;
+
+    opacity: 0.85;
+}
+
+footer a {
+    color: white;
+
+    font-weight: bold;
+}
+
+/* Utility */
+
+.hidden {
+    display: none;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .weather-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 25px 12px;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    .search-section {
+        flex-direction: column;
+    }
+
+    .search-section button {
+        width: 100%;
+    }
+
+    .weather-container {
+        padding: 20px;
+    }
+
+    .weather-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .temperature-section div {
+        font-size: 52px;
+    }
+
+}
