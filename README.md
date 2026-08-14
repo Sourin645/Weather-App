@@ -1,6 +1,6 @@
 # Weather-App
 
-1.Colourful Weather App
+1.Weather App
 
 A responsive and colourful API-based Weather Application built using HTML, CSS, and JavaScript. The application allows users to search for any location and displays real-time weather information using the WeatherAPI.
 
